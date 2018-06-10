@@ -13,12 +13,31 @@ Es wurde die Veränderung des optischen Drehwinkels $\alpha$ über die Zeit bei 
 	\end{minipage}
 	
 	
-	\caption{Auftragung des optischen Drehwinkels gegen die Zeit bei 25°C, 31°C, 35.5°C, 41°C zur Bestimmung von \alpha_0, \alpha_\infty sowie von k. Die Auswertung erfolgte mit Igor Pro 6.37.}
+	\caption{Auftragung des optischen Drehwinkels gegen die Zeit bei 25°C, 31°C, 35.5°C, 41°C zur Bestimmung von \alpha_0, \alpha_\infty sowie von k bei der Hydrolyse von Saccharose ($25 Gew.\%$) mit $3-N$ HCL. Die Auswertung erfolgte mit Igor Pro 6.37 und einer, vom Assistenten zur Verfügung gestellten, Anpassungsfunktion.}
 	
 
 	\label{at}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+
+ 
+ 
+ \caption{Zusammenfassung der Reaktionskonstanten der Anpassung mit Gleichung XXX in Relation zur Temperatur.}
+\begin{tabular}{L{0.5\linewidth}L{0.5\linewidth}}
+Temperatur $[°C]$ & Reaktionskonstante $[???]$  \\
+\hline \addlinespace[1ex] 
+$25$ & $3.83\cdot 10^{-5}$ \\
+$31$ & $3.09\cdot 10^{-4}$ \\
+$35.5$ & $8.91\cdot 10^{-4}$ \\
+$41$ & $1.33\cdot 10^{-3}$ \\
+
+ \end{tabular}
+ \label{tab1}
+ \end{table}
+
+
 
 \begin{equation}
 k_T = k_\infty \cdot e^{\frac{E_a}{RT}
@@ -35,7 +54,7 @@ ln(k_T) = \frac{E_a}{R} \cdot \frac{1}{T} + ln(k_\infty)
 
 
 
-Anschießend wurden der Natürliche Logarithmus von $k_T$ gegen $\frac{1}{T}$ gemäß Gleichung REF aufgetragen. Durch eine lineare Regression konnten somit $E_a$ und $k_\infty$ bestimmt werden. Dies ist in Abbildung \ref{ln} dargestellt.
+Anschießend wurden der Natürliche Logarithmus von $k_T$ gegen $\frac{1}{T}$ gemäß der Arrhenius-Gleichung REF aufgetragen. Durch eine lineare Regression konnten somit $E_a$ und $k_\infty$ bestimmt werden. Dies ist in Abbildung \ref{ln} dargestellt.
 
 
 \begin{figure}[h]
@@ -45,13 +64,26 @@ Anschießend wurden der Natürliche Logarithmus von $k_T$ gegen $\frac{1}{T}$ ge
 	\end{minipage}
 	
 	
-	\caption{Auftragung von k_T über \frac{1}{T} zur Bestimmung von E_a und k_\infty mittels einer linearen regression. Die Auswertung erfolgte mit Igor Pro 6.37}
+	\caption{Auftragung von k_T über \frac{1}{T} zur Bestimmung von E_a und k_\infty mittels einer linearen Regression der logarithmierten Arrhenius-Gleichung. Die Auswertung erfolgte mit Igor Pro 6.37}
 	
 	
 	\label{ln}
 \end{figure}
 
+\begin{table}[H]
+
+ 
+ 
+ \caption{Zusammenfassung der Ergebnisse der lineraren Regression der logarithmierten Arrhenius-Gleichung in Gegenüberstellung zur Literatur.}
+\begin{tabular}{L{0.25\linewidth}L{0.25\linewidth}L{0.25\linewidth}R{0.25\linewidth}}
+Konstante & Einheit & Messwert & Literatur cite{}\\
+\hline \addlinespace[1ex] 
+$ k_\infty$ & $ \frac{1}{s} $ & $ 2.77\cdot 10^{26}$  & \\
+$ E_a $ & $ \frac{kJ}{mol} $ & $175 \pm 35$ & \\
 
 
+ \end{tabular}
+ \label{tab2}
+ \end{table}
 
 \end{document}
