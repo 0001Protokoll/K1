@@ -1,0 +1,76 @@
+\setlength\abovedisplayshortskip{20pt}
+\setlength\belowdisplayshortskip{20pt}
+\setlength\abovedisplayskip{20pt}
+\setlength\belowdisplayskip{20pt}
+
+\section{Theoretische Grundlagen \cite{wedler}}
+
+
+Der Drehwinkel, der mit Hilfe eines Polarimeters gemessen werden kann, ist durch folgende Gleichung mit dem spezifischen drehwinkel eines optisch aktiven Stoffes verknüpft:
+
+\begin{equation}
+\alpha=\left[\alpha\right]_\lambda^T \cdot l \cdot c
+\end{equation}
+
+Dabei ist l die Länge des Probenröhrchens (in dm), c die Konzentration der Probe und $\lambda$ die Wellenlänge des Lichtes (für gewöhnlich: $\lambda_\text{D}=589~\si{nm}$).
+
+Die Reaktionsgleichung der Hydrolyse von Saccharose [S] zu Fructose [F] und Glucose [G] lautet wie folgt: 
+
+\begin{equation}
+\ch{ \text{[S]} + [H]+ + H2O <=>[ $k_1$ ][ $k_{-1}$ ] \text{[S}H\text{]}+ + H2O ->[ $k_2$ ] \text{[F]} + \text{[G]} + [H]+  }
+\end{equation}
+Die Reaktion verläuft unter Einsatz von katalytischen Mengen an Salzsäure und in wässriger Lösung, so dass die Hydrolyse irreversibel ist. Der geschwindigkeitsbestimmende Schritt der Reaktion ist der zweite Teil der Reaktion
+\begin{align}
+v = - \frac{d \text{[S]}}{dt}= k_2 \cdot \ch{\text{[S}H\text{]}+} \cdot \ch{[H2O]}
+\end{align}
+wobei unter Verwendung des Quasistationaritätsprinzips gilt:
+\begin{align}
+\ch{\text{[S}H\text{]}+}=\frac{k_1}{\left(k_{-1} + k_2\right)}
+ \cdot \ch{\text{[}H\text{]}+} \cdot \text{[S]}
+\end{align}
+,sodass nun ein Geschwindigkeitsgesetz 3. Ordnung aufgeschrieben werden kann.
+\begin{align}
+v = - \frac{d \text{[S]}}{dt}= k \cdot \ch{\text{[}H\text{]}+} \cdot \text{[S]} \cdot \ch{[H2O]}
+\quad\quad \text{mit}\quad\quad  K=\frac{k_1}{\left(k_{-1} + k_2\right)}
+ \cdot k_2
+\end{align}
+
+Es wird nun jedoch zum einem angenommen, dass die Konzentration des Wasser konstant ist, da die Reaktion im wässrigen Medium durchgeführt wird und daher diese sich im Verlauf der Reaktion kaum ändert, zum anderen wird angenommen, dass die Konzentration der Protonen konstant ist, da es sich um einen katalytischen Prozess handelt. Das Geschwindigkeitsgesetzt ändert sich nun zu
+\begin{equation}
+v = - \frac{d \text{[S]}}{dt}= k \cdot \text{[S]}
+\quad\quad \text{mit}\quad\quad  k=K\cdot\ch{\text{[}H\text{]}+} \cdot \ch{[H2O]}
+\end{equation}
+Die Reaktion beschreibt also eine Geschwindigkeitsgesetz nach  1. Ordnung es wird auch in diesem Falle von einer Pseudo-Reaktion 1. Ordnung gesprochen. 
+
+
+
+Die Anwendung der Operatoren liefert dann das integrierte Geschwindigkeitsgesetz:
+
+\begin{equation}
+\ch{[S]} = \ch{[S]0}\cdot e^{-kt}
+\end{equation}
+
+Um die Temperaturabhängigkeit der Reaktion zu ermitteln, nutzt man die Arrhenius-Gleichung:
+
+\begin{equation}
+k=k_\infty \cdot e^{ - \frac{E_A}{R \cdot T}}
+\end{equation}
+
+Dabei ist $k_\infty$ der sogenannte Frequenzfaktor, $E_A$ die Aktivierungsenergie, R die Gaskonstante und T die Temperatur.
+
+Die graphische Auftragung ("Arrhenius-Plot") gelingt durch logarithmieren der oberen Gleichung:
+
+\begin{equation}
+ln(k)=ln(k_\infty)-\left( \frac{E_A}{ \text{R} \cdot T} \right)
+\end{equation}
+
+Der Drehwinkel lässt sich, da er sich linear mit dem Verlauf der Reaktion verändert, als Funktion der Zeit begreifen. Aus dieser Abhängigkeit heraus, lässt sich durch Hinzunahme von Hilfsparametern ein Ausdruck herleiten, der diesen Zusammenhang berücksichtigt:
+
+\begin{equation}
+\alpha(t)=(\alpha_0-\alpha)\cdot e^{(-kt)}+\alpha_\infty
+\end{equation}
+
+$\alpha_0$ = Drehwinkel zu Beginn der Reaktion, $\alpha_\infty$ = Drehwinkel am Ende der Reaktion.
+
+
+
