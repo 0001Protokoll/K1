@@ -1,25 +1,17 @@
-\setlength\abovedisplayshortskip{20pt}
-\setlength\belowdisplayshortskip{20pt}
-\setlength\abovedisplayskip{20pt}
-\setlength\belowdisplayskip{20pt}
+\setlength\abovedisplayshortskip{15pt}
+\setlength\belowdisplayshortskip{15pt}
+\setlength\abovedisplayskip{15pt}
+\setlength\belowdisplayskip{15pt}
 
-\section{Theoretische Grundlagen \cite{wedler}}
+\section{Theoretische Grundlagen \cite{Wedler}}
 
 
-Der Drehwinkel, der mit Hilfe eines Polarimeters gemessen werden kann, ist durch folgende Gleichung mit dem spezifischen Drehwinkel eines optisch aktiven Stoffes verknüpft:
-
-\begin{equation}
-\alpha=\left[\alpha\right]_\lambda^T \cdot l \cdot c
-\label{eq:Drehwinkelallgemein}
-\end{equation}
-
-Dabei ist l die Länge des Probenröhrchens (in dm), c die Konzentration der Probe und $\lambda$ die Wellenlänge des Lichtes (für gewöhnlich: $\lambda_\text{D}=589~\si{nm}$).
 
 
 \begin{figure}[H]
 
 
-     \includegraphics[width=1\linewidth]{Bilder/hydrolyse.eps}
+     \includegraphics[width=1\linewidth]{Bilder/hydrolyse.png}
 \caption{Mechanismus der säurekatalysierten Hydrolyse
 von Saccharose in wässriger Lösung. Der einleitende Schritt ist
 die Aktivierung des Sauerstoffatoms der Esterbindung durch Protonierung. Es folgt der nucleophile Angriff des Wassermoleküls und anschließende Hydrolyse des 
@@ -85,10 +77,60 @@ ln(k)=ln(k_\infty)-\left( \frac{E_A}{ \text{R} \cdot T} \right)
 \label{eq:logarithmArrhenius}
 \end{equation}
 
-Der Drehwinkel lässt sich, da er sich linear mit dem Verlauf der Reaktion verändert, als Funktion der Zeit begreifen. Aus dieser Abhängigkeit heraus, lässt sich durch Hinzunahme von Hilfsparametern ein Ausdruck herleiten, der diesen Zusammenhang berücksichtigt:
+
+Der Drehwinkel, der mit Hilfe eines Polarimeters gemessen werden kann, ist durch folgende Gleichung mit dem spezifischen Drehwinkel eines optisch aktiven Stoffes verknüpft:
 
 \begin{equation}
-\alpha(t)=(\alpha_0-\alpha)\cdot e^{(-kt)}+\alpha_\infty
+\alpha=\left[\alpha\right]_\lambda^T \cdot l \cdot c
+\label{eq:Drehwinkelallgemein}
+\end{equation}
+
+Dabei ist $l$ die Länge des Probenröhrchens , c die Konzentration der Probe und $\lambda$ die Wellenlänge des Lichtes (für gewöhnlich: $\lambda_\text{D}=589~\si{nm}$).
+
+Dabei gilt, dass der zu messende Drehwinkel als Summe aus dem Produkten der molaren Drehwinkel $\alpha_{Zucker}^m  $ und derer in Lösung vorliegenden Zucker-Konzentrationen dargestellt werden kann.
+\begin{equation}
+\alpha=\alpha_S^m \cdot\text{[S]}+ \alpha_F^m \cdot\text{[F]}+ \alpha_G^m\cdot\text{[G]}
+\end{equation}
+
+Wobei vereinfacht werden kann da gilt $\text{[F]}=\text{[G]}$
+\begin{equation}
+\alpha=\alpha_S^m \cdot\text{[S]}+ \alpha_I^m \cdot\text{[I]} \quad\quad\quad \text{mit}\quad\quad\quad\alpha_I^m \cdot\text{[I]}=\alpha_F^m \cdot\text{[F]}+ \alpha_G^m\cdot\text{[G]}\
+\end{equation}
+
+Und da ebenso gilt bei $t=0$ ist $\text{[I]}= 0$ und $\text{[S]}=\text{[S]}_0-\text{[I]}$ kann geschrieben werden
+\begin{equation}
+\alpha=\alpha_S^m \cdot(\text{[S]}_0-\text{[I]})+  \alpha_I^m \cdot\text{[I]}
+\end{equation}
+beziehungsweise
+\begin{equation}
+\text{[I]} =\frac{\alpha_S^m \cdot\text{[S]}_0 - \alpha }{\alpha_I^m-\alpha_S^m} 
+\label{gleichung 13}
+\end{equation}
+Wobei des weiteren zwei Grenzfälle unterschieden werden können
+\begin{equation} 
+   \begin{cases}
+      \alpha_0 =\alpha_S^m \cdot\text{[S]}_0 & \text{f"ur } t=0\\
+       \alpha_{\infty} =\alpha_I^m \cdot\text{[S]}_0 & \text{f"ur } t=\infty\\
+     \end{cases}
+\end{equation}
+sodass Gleichung \ref{gleichung 13} zu 
+\begin{equation}
+\text{[I]} =\frac{\alpha_0 - \alpha }{\alpha_{\infty}-\alpha_0} \cdot \text{[S]}_0
+\end{equation}
+vereinfacht werden kann.
+
+Dies eingesetzt in Gleichung \ref{eq:integriertesGesetz} immer noch unter Annahme von $\text{[S]}=\text{[S]}_0-\text{[I]}$ führt zu folgenden Ausdruck
+
+
+\begin{align}
+\ch{[S]}_0-\frac{\alpha_0 - \alpha }{\alpha_{\infty}-\alpha_0} \cdot \text{[S]}_0 &= \ch{[S]0}\cdot e^{-kt} \\[10pt]
+1-\frac{\alpha_0 - \alpha }{\alpha_{\infty}-\alpha_0} &= e^{-kt}
+\end{align}
+
+Der Drehwinkel lässt sich also als eine sich linear mit dem Verlauf der Reaktion verändernde Funktion der Zeit begreifen.
+
+\begin{equation}
+\alpha(t)= (\alpha_0 - \alpha_\infty) \cdot e^{(-kt)}+\alpha_{\infty}
 \label{eq:winkelvontfunktion}
 \end{equation}
 
